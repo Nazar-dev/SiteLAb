@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Найкращі міста для туризму">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/main-logo.png" type="image/png">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Головна сторінка - Tourism.com</title>
+</head>
+<body>
+  <div class="header">
+    <a class="main__logo" href="index.html"><img src="img/logo.png" alt="Logo"></a>
+    <div id="menu" class="menu">
+      <a href="#europa">Європа</a>
+      <a href="#usa">Америка</a>
+    </div>
+  </div>
+  <h1 class="main__title">TOURISM.COM - сайт <br>про подорожі</h1>
+  <div class="top">
+    <h2>Топ міст світу</h2>
+    <div class="top__list">
+      <a href="cities/new_york.html"><div class="city">
+        <div class="city__image"><img src="img/york.jpg" alt="New York"></div>
+        <h3>Нью Йорк, США</h3>
+        <p>Нью-Йорк - одне з найбільших мегаполісів світу та одне з найпопулярніших міст серед туристів. У цьому місті життя не затихає на хвилину...</p>
+      </div></a>
+      <a href="cities/madrid.html"><div class="city">
+        <div class="city__image"><img src="img/madrid.jpg" alt="Madrid"></div>
+        <h3>Мадрид, Іспанія</h3>
+        <p>Мадрид, одне з найкрасивіших міст світу, столиця, що має колосальну культурну та художню спадщину.</p>
+      </div></a>
+      <a href="cities/miami.html"><div class="city">
+        <div class="city__image"><img src="img/mayami.jpg" alt="Miami"></div>
+        <h3>Маямі, США</h3>
+        <p>Маямі - це розкіш і блиск американського способу життя на березі смарагдових вод Атлантики.</p>
+      </div></a>
+    </div>
+  </div>
+  <div id="europa" class="reg__header">
+    <img src="img/europa.jpg" alt="Europa">
+    <h2>Європа</h2>
+  </div>
+  <div class="top">
+    <div class="top__list">
+      <a href="cities/london.html"><div class="city">
+        <div class="city__image"><img src="img/London.jpg" alt="London"></div>
+        <h3>Лондон, Великобританія</h3>
+        <p>Відправитися в тур столицею Великобританії хоча б раз у житті необхідно кожній людині.</p>
+      </div></a>
+      <a href="cities/madrid.html"><div class="city">
+        <div class="city__image"><img src="img/madrid.jpg" alt="Madrid"></div>
+        <h3>Мадрид, Іспанія</h3>
+        <p>Мадрид, одне з найкрасивіших міст світу, столиця, що має колосальну культурну та художню спадщину.</p>
+      </div></a>
+      <a href="cities/praga.html"><div class="city">
+        <div class="city__image"><img src="img/praga.jpg" alt="Praga"></div>
+        <h3>Прага, Чехія</h3>
+        <p>Прага - місто, в яке закохуєшся без пам'яті і приїжджаєш знову і знову.</p>
+      </div></a>
+    </div>
+  </div>
+  <div id="usa" class="reg__header">
+    <img src="img/usa.jpg" alt="USA">
+    <h2>США</h2>
+  </div>
+  <div class="top">
+    <div class="top__list">
+      <a href="cities/new_york.html"><div class="city">
+        <div class="city__image"><img src="img/york.jpg" alt="New York"></div>
+        <h3>Нью Йорк, США</h3>
+        <p>Нью-Йорк - одне з найбільших мегаполісів світу та одне з найпопулярніших міст серед туристів. У цьому місті життя не затихає на хвилину...</p>
+      </div></a>
+      <a href="cities/los_angl.html"><div class="city">
+        <div class="city__image"><img src="img/los.jpg" alt="los angeles"></div>
+        <h3>Лос Анджелес, США</h3>
+        <p>Лос-Анджелес - один із найбільших світових центрів індустрії розваг, візитною карткою якого є <b>Голлівуд</b>.</p>
+      </div></a>
+      <a href="cities/miami.html"><div class="city">
+        <div class="city__image"><img src="img/mayami.jpg" alt="Miami"></div>
+        <h3>Маямі, США</h3>
+        <p>Маямі - це розкіш і блиск американського способу життя на березі смарагдових вод Атлантики.</p>
+      </div></a>
+    </div>
+  </div>
+  <script>
+    const smoothLinks = document.querySelectorAll('a[href^="#"]');
+    for (let smoothLink of smoothLinks) {
+      smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
+
+        document.querySelector(id).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    };
+  </script>
+
+</body>
+</html>
